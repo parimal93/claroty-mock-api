@@ -309,7 +309,7 @@ def project_device(device: dict[str, Any], requested_fields: list[str]) -> dict[
     return {field: device.get(field) for field in requested_fields}
 
 
-@app.post("/api/devices")
+@app.post("/api/v1/devices")
 def get_devices(
     payload: dict[str, Any] = Body(...),
     authorization: Optional[str] = Header(None)
